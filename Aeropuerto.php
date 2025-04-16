@@ -77,11 +77,12 @@ class Aeropuerto{
         $asientosDispo = $colVuelos->asignarAsientosDisponibles($cantAsientosIng); # Obtengo una variable del tipo bool si los asientos estan disponibles 
         if ($asientosDispo && $fechaVueloObt == $fechaIng && $destinoVueloObt == $destinoIng){
             new Vuelo();
+            # No llegue por el tiempo, estoy entregando 18:05
         }
     }
 
     public function promedioRecaudadoXAerolinea($identAerolineaIng){
-
+        # No llegue por el tiempo, estoy entregando 18:05
     }
 }
 ?>
