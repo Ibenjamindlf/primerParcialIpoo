@@ -82,8 +82,22 @@ class Vuelo{
     # Metodo __toString
     public function __toString()
     {
+        $personas = $this->getRefPersonaInst(); # Obtengo la coleccion de 
+        $cadenaPersona = ""; # Inicio la cadena en vacio
+        foreach ($personas as $persona) { # Recorro la coleccion obtenida y voy guardando en 
+            $cadenaPersona .= $persona . "\n"; # 
+        }
+
         $cadena = (
-            ""
+            "Numero: " . $this->getNumeroInst() . "\n" .
+            "Importe: " . $this->getImporteInst() . "\n" .
+            "Fecha: " . $this->getFechaInst() . "\n" .
+            "Destino: " . $this->getDestinoInst() . "\n" .
+            "Hora arribo: " . $this->getHoraArriboInst() . "\n" .
+            "Hora Partida: " . $this->getHoraPartidaInst() . "\n" .
+            "Cantidad asientos Disponible: " . $this->getCantAsientosDisInts() . "\n" .
+            "Cantidad asientos Totales: " . $this->getCantAsientosTotInst() . "\n" .
+            "Personas: " . $cadenaPersona . "\n"
         );
         return $cadena;
     }
